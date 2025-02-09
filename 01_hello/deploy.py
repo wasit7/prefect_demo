@@ -6,7 +6,9 @@ if __name__ == "__main__":
         entrypoint="01_hello/flow.py:hello_flow",
     ).deploy(
         name="my-first-deployment",
-        parameters={},
+        parameters={
+            'name': 'DSI: Big Data Infrastructure'
+        },
         work_pool_name="default-agent-pool",
         cron="* * * * *",  # Run every munite
     )
