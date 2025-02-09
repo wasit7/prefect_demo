@@ -1,8 +1,8 @@
 from prefect import flow
 
-@flow
-def hello_flow():
-    print("Hello, DIS321: Big Data Infrastructure!")
+@flow(log_prints=True)
+def hello_flow(name=""):
+    print(f"Hello, {name}!")
 
 if __name__ == "__main__":
-	hello_flow()
+	hello_flow("world")
