@@ -5,7 +5,7 @@ if __name__ == "__main__":
         source="https://github.com/wasit7/prefect_demo.git",
         entrypoint="01_hello/flow.py:hello_flow",
     ).deploy(
-        name="my-first-deployment",
+        name="remote-deployment",
         parameters={
             'name': 'DSI: Big Data Infrastructure'
         },
